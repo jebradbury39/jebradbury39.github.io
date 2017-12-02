@@ -1,0 +1,18 @@
+<div>
+    <div class="title">Collision Detection</div>
+    <br>
+    <p>
+      <pre>
+         Collisions can occur between any object and the terrain, or between any two objects. In
+         addition, attempting to leave the bounds of the terrain results in a collision. Any
+         collision "destroys" the object. This triggers some effect, the object is no longer
+         controllable, and if it is not in contact with the terrain, then it drifts down until
+         it is.
+         
+         To test for collisions, each object has a spherical bound, and the distance between two
+         spheres are checked. For the terrain, the object's position is calculated to the nearest
+         heightmap entry. If the height at that entry is above the bottom of the object's bounding
+         sphere, then a collision has occurred.
+      </pre>
+    </p>
+</div>

@@ -1,0 +1,26 @@
+<div>
+   <div class="title">Terrain Generation</div>
+   <br>
+   <p>
+   <pre>
+      The first task was to generate the scene. I had a few options, such as using midpoint
+      displacement, but I decided on a variant of Perlin noise (using octaves) instead. This
+      works essentially like calling random() and getting back a single number, except noise()
+      has to take a time/place variable. This is what allows for the noise to smoothly change
+      values in a natural way.
+      
+      Once the terrain was created, I colored based on a natural coloring scheme: water at the
+      lowest level, followed by sand, vegetation, rock, and finally snow. To blend the layers,
+      for the upper 20% of a layer, it used a gradient between it's color and the color of the
+      layer above it. This gave a reasonable result, but it looked unnaturally regular. To 
+      alleviate this, I colored steep faces a rocky gray, since naturally cliff faces usually
+      have less vegetation.
+   </pre>
+   </p>
+   <br>
+   The results:
+   <img src="img/perlin_terrain.png"/>
+   <br><br>
+   And a comparision with using just rand:
+   <img src="img/random_terrain.png"/>
+</div>
